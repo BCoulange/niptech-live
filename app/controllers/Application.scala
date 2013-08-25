@@ -41,8 +41,11 @@ object Application extends Controller {
   }
 
 
-  def configure(episodeNb: Option[String], onairswitch: Option[String], youtubeid: Option[String], twitterstreamswitch: Option[String]) = Action {
+  def configure(iframeCode: Option[String], episodeNb: Option[String], onairswitch: Option[String], youtubeid: Option[String], twitterstreamswitch: Option[String]) = Action {
     implicit request =>
+      iframeCode foreach {
+        id => Cache.set("iframeCode", id)
+      }
       episodeNb foreach {
         id => Cache.set("episodeNb", id)
       }

@@ -9,6 +9,7 @@
         }
     }
 
+
     @getYouTubeIdDisplay() = @{
         if(getYouTubeId() == "")
             ("none", "unchecked")
@@ -33,6 +34,18 @@
     <br/>
     <div style="margin-left:50px;">
         <form action="@routes.Application.configure()">
+            <div class="control-group" style="height: 63px;">
+                <input type="text" name="iframeCode" id="iframeCode" placeholder="iframe"
+                style="
+                margin-left: 10px;
+                margin-top: 3px;
+                width: 300px;
+                height: 40px;
+                font-size: 23px;
+                font-family: Trebuchet, Arial, sans-serif;
+                font-weight: bold;">
+            </div>
+
             <div class="control-group" style="height: 63px;">
                 <input type="text" name="episodeNb" id="episodeNb" placeholder="Episode number"
                 style="

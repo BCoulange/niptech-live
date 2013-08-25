@@ -16,6 +16,13 @@
         }
     }
 
+    @getIframeCode() = @{
+        Cache.getOrElse[String]("iframeCode") {
+            "piou2"
+        }
+    }
+
+
 @main(Some(username)) {
 
     <div id="onError" class="alert-message error">
@@ -27,7 +34,8 @@
     <div class="row-fluid" style="background-image: url('@routes.Assets.at("images/bg-niptech.png")');">
         <div class="span1" style="height: 400px;"></div>
         <div class="span5" style="margin-left: 0px; border-left: 1px solid lightgray;">
-            <div id="ytplayer" style="height: 350px;"></div>
+    <!--         <div id="ytplayer" style="height: 350px;"></div> -->
+           <div> @Html(getIframeCode()) </div> 
             <div style="border-bottom: 1px solid lightgray; padding-bottom: 10px; background-color: white">
                 <a class="nip-button" style="margin-left:10px; padding: 10px 10px;" id="reloadvideo" onclick="reloadVideo()">
                     Synchroniser avec le direct</a>
@@ -47,10 +55,7 @@
             <div style="height:70px;background-color:white;border-bottom: 1px solid lightgray;"></div>
         </div>
         <div class="span4" style="margin-left: 0px; margin-right: 0px; border-left: 1px solid lightgray; width: 34%">
-            <div style="height: 45px; background-color: white; border-bottom: 1px solid lightgray;">
-                <span style="font-size: 18px; color: rgb(131,131,131); vertical-align: -20px; margin-left: 10px;">
-                    Chat board</span>
-            </div>
+
             <div id="onChat">
                 <div id="main" style="height:100%;">
                     <div id="messages">
