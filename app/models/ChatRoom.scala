@@ -27,11 +27,13 @@ object ChatRoom {
 
   val members = collection.mutable.ArrayBuffer[String]()
 
+
   def initialize = {
 
     // robot
 
     initTwitterListener
+
 
     Logger.info("ChatRoom initialized")
 
