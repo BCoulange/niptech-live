@@ -18,7 +18,7 @@
 
     @getIframeCode() = @{
         Cache.getOrElse[String]("iframeCode") {
-            "piou2"
+            "Pas d'images ce soir :("
         }
     }
 
@@ -37,17 +37,15 @@
     <!--         <div id="ytplayer" style="height: 350px;"></div> -->
            <div> @Html(getIframeCode()) </div> 
             <div style="border-bottom: 1px solid lightgray; padding-bottom: 10px; background-color: white">
-                <a class="nip-button" style="margin-left:10px; padding: 10px 10px;" id="reloadvideo" onclick="reloadVideo()">
-                    Synchroniser avec le direct</a>
                 <span name="twitterShare" id="twitterShare" class="pull-right" style="margin-right:20px; margin-top: 10px; font-family: Hero; color: rgb(131,131,131); font-size: 18px;">
                     Partager
-                    <a href="https://twitter.com/intent/tweet?button_hashtag=nwlive&text=Rejoignez+nous+sur+la+chatroom+et+suivez+@@niptechpodcast+en+direct.&url=http://live.niptech.com" target="_blank" style="margin-left: 5px;">
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=psLive&text=Rejoignez+nous+sur+la+chatroom+et+suivez+@@podcastscience+en+direct.&url=http://live.podcastscience.fm" target="_blank" style="margin-left: 5px;">
                         <img src="@routes.Assets.at("images/twtr-nt.png")">
                     </a>
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flive.niptech.com&p[summary]=Rejoignez+nous+sur+la+chatroom+et+suivez+le+live+niptech+en+direct" target="_blank" style="margin-left: 5px;">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flive.podcastscience.fm&p[summary]=Rejoignez+nous+sur+la+chatroom+et+suivez+le+live+podcastscience+en+direct" target="_blank" style="margin-left: 5px;">
                         <img src="@routes.Assets.at("images/fb-nt.png")">
                     </a>
-                    <a href="https://plus.google.com/share?url=http://live.niptech.com" target="_blank" style="margin-left: 5px;">
+                    <a href="https://plus.google.com/share?url=http://live.podcastscience.fm" target="_blank" style="margin-left: 5px;">
                         <img src="@routes.Assets.at("images/gplus-nt.png")">
                     </a>
                 </span>
